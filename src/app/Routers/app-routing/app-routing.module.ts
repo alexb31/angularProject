@@ -5,7 +5,7 @@ import { AppComponent } from '../../app.component';
 import { CompanyInfoComponent } from '../../components/company-info/company-info.component';
 
 const appRoutes: Routes = [
-  {path: '', component: AppComponent}
+  {path: '', component: AppComponent},
   {path: 'companyInfo', component: CompanyInfoComponent},
 ]
 
