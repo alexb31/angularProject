@@ -1,7 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { SpacexApiService } from './BackEnd/spacex-api.service';
-import { LaunchOptions } from './Models/launchOptions';
 import {Observable} from 'rxjs';
+
+
+import { CompanyInfo } from './Models/CompanyInfo';
+import { Launch } from './Models/launch';
+import { Launchpad } from './Models/launchpad';
+import { CapPart } from './Models/capPart';
+import { CorePart } from './Models/corePart';
+import { CoreOptions } from './Models/coreOptions';
+import { CapOptions } from './Models/capOptions';
+import { Capsule } from './Models/capsule';
+import { Rocket } from './Models/rocket';
+import { LaunchOptions } from './Models/launchOptions';
 
 @Component({
   selector   : 'app-root',
@@ -18,23 +29,42 @@ export class AppComponent implements OnInit {
     path : '/launches'
   },
 ];
+  title = 'app';
+  companyInfo;
+  capsule;
+  cap;
+  core;
+  launch;
+  rocket;
+  launchpad;
+  lastLaunches;
+  pastLaunches;
+  upcomingLaunches;
+  allLaunches;
 
   constructor(private spacexService: SpacexApiService) {
   }
 
   ngOnInit(): void {
     this.spacexService.getCompanyInfo()
-                      .subscribe(data =>
-                      console.log(data));
+      .subscribe(data =>{
+        this.companyInfo = data;
+      });
+
     this.spacexService.getLatestLaunches()
-                      .subscribe(data =>
-                      console.log(data));
+      .subscribe(data =>{
+        this.lastLaunches = data;
+      });
+
     this.spacexService.getPastLaunches()
-                      .subscribe(data =>
-                      console.log(data));
+      .subscribe(data =>{
+        this.pastLaunches = data;
+      });
+
     this.spacexService.getUpcomingLaunches()
-                      .subscribe(data =>
-                      console.log(data));
+      .subscribe(data =>{
+        this.upcomingLaunches = data;
+      });
 
     let launchOptions = {
       order        : 'desc',
@@ -42,11 +72,14 @@ export class AppComponent implements OnInit {
     }
 
     this.spacexService.getLaunches(launchOptions)
-                      .subscribe(data =>
-                      console.log(data));
+      .subscribe(data =>{
+        this.allLaunches = data;
+      });
 
     this.spacexService.getCoreData('B1041')
-                      .subscribe(data =>
-                      console.log(data));
+      .subscribe(data =>{
+        this.core = data;
+      });
+
   }
 }
