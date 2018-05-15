@@ -9,6 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 // import { CompanyInfo } from '../../Models/CompanyInfo';
@@ -33,7 +35,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     BrowserAnimationsModule, 
     MatSidenavModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule
   ]
  })
 export class SharedModule { }
