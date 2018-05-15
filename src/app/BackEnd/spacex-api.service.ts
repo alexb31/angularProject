@@ -2,8 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { CompanyInfo } from '../Models/CompanyInfo';
-import {catchError} from 'rxjs/operators';
+import { catchError} from 'rxjs/operators';
 import { Launch } from '../Models/launch';
+import { Launchpad } from '../Models/launchpad';
+import { CapPart } from '../Models/capPart';
+import { CorePart } from '../Models/corePart';
+import { CoreOptions } from '../Models/coreOptions';
+import { CapOptions } from '../Models/capOptions';
+import { Capsule } from '../Models/capsule';
+import { Rocket } from '../Models/rocket';
 import { LaunchOptions } from '../Models/launchOptions';
 import { URLSearchParams } from '@angular/http';
 
@@ -15,6 +22,8 @@ export class SpacexApiService {
 
   constructor(private restClient: HttpClient) { }
 
+
+  // Launches
   getCompanyInfo(): Observable<CompanyInfo> {
     const requestEndpoint = this.baseUrl + '/info';
     return this.restClient.get<CompanyInfo>(requestEndpoint)
@@ -58,6 +67,92 @@ export class SpacexApiService {
       catchError(this.handleError)
     );
   }
+
+  // Capsule Data
+  getCapsuleData(name = ''): Observable<Capsule> {
+    if ( name != '' ){
+      name = '/' + name;
+    }
+    const requestEndpoint = this.baseUrl + '/capsules' + name;
+    return this.restClient.get<Capsule>(requestEndpoint)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  // Rocket Data
+  getRocketData(name = ''): Observable<Rocket> {
+    if ( name != '' ){
+      name = '/' + name;
+    }
+    const requestEndpoint = this.baseUrl + '/rockets' + name;
+    return this.restClient.get<Rocket>(requestEndpoint)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  // launchpad  Data
+  getLaunchpadData(name = ''): Observable<Launchpad> {
+    if ( name != '' ){
+      name = '/' + name;
+    }
+    const requestEndpoint = this.baseUrl + '/launchpads' + name;
+    return this.restClient.get<Launchpad>(requestEndpoint)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  // Core Data
+  getCoreData(name = ''): Observable<CorePart> {
+    if ( name != '' ){
+      name = '/' + name;
+    }
+    const requestEndpoint = this.baseUrl + '/parts/cores' + name;
+    return this.restClient.get<CorePart>(requestEndpoint)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getCoreSearch(options: CoreOptions): Observable<CorePart> {
+    let params = new URLSearchParams();
+    for(let key in options){
+      params.set(key, options[key]);
+    }
+    const requestEndpoint = this.baseUrl + '/parts/cores?' + params.toString();
+    return this.restClient.get<CorePart>(requestEndpoint)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+
+  // Caps Data
+  getCapData(name = ''): Observable<CapPart> {
+    if ( name != '' ){
+      name = '/' + name;
+    }
+    const requestEndpoint = this.baseUrl + '/parts/caps' + name;
+    return this.restClient.get<CapPart>(requestEndpoint)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getCapearch(options: CapOptions): Observable<CapPart> {
+    let params = new URLSearchParams();
+    for(let key in options){
+      params.set(key, options[key]);
+    }
+    const requestEndpoint = this.baseUrl + '/parts/caps?' + params.toString();
+    return this.restClient.get<CapPart>(requestEndpoint)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {

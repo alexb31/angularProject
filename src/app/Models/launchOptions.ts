@@ -9,7 +9,7 @@ export interface LaunchOptions {
     /* Filter launches by mongo document id */
     flight_id?: Number
     /* Change result ordering by asc or desc */
-    order?: Order
+    order?: String
     /* Filter by a date range */
     start?: Date
     /* Filter by a date range */
