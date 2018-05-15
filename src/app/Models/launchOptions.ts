@@ -1,10 +1,15 @@
+export enum Order {
+    asc  = "asc",
+    desc = "desc"
+}
+
 export interface LaunchOptions {
     /* Use true to show mongo document id's */
     id?: Boolean
     /* Filter launches by mongo document id */
     flight_id?: Number
     /* Change result ordering by asc or desc */
-    order?: String
+    order?: Order
     /* Filter by a date range */
     start?: Date
     /* Filter by a date range */
