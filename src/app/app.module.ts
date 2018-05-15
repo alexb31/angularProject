@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './Routers/app-routing/app-routing.module';
 import { CompanyInfoComponent } from './components/company-info/company-info.component';
+import { SharedModule } from './Modules/shared/shared.module';
 
 import { SharedModule } from './Modules/shared/shared.module';
 
