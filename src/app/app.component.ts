@@ -9,7 +9,15 @@ import {Observable} from 'rxjs';
   styleUrls  : ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'app';
+  menuItems = [{
+    name : 'Company Data',
+    path : '/companyInfo'
+  },
+  {
+    name : 'Launches',
+    path : '/launches'
+  },
+];
 
   constructor(private spacexService: SpacexApiService) {
   }
