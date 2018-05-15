@@ -18,5 +18,14 @@ export class AppComponent implements OnInit {
     this.spacexService.getCompanyInfo()
                       .subscribe(data =>
                       console.log(JSON.stringify(data)));
+    this.spacexService.getLatestLaunches()
+                      .subscribe(data =>
+                      console.log(JSON.stringify(data)));
+    this.spacexService.getPastLaunches()
+                      .subscribe(data =>
+                      console.log(JSON.stringify(data)));
+    this.spacexService.getUpcomingLaunches()
+                      .subscribe(data =>
+                      console.log(JSON.stringify(data)));
   }
 }
