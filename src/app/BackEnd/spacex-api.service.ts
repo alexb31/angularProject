@@ -4,6 +4,8 @@ import { Observable, throwError } from 'rxjs';
 import { CompanyInfo } from '../Models/CompanyInfo';
 import {catchError} from 'rxjs/operators';
 import { Launch } from '../Models/launch';
+import { LaunchOptions } from '../Models/launchOptions';
+import { URLSearchParams } from '@angular/http'
 
 @Injectable({
   providedIn: 'root'
@@ -39,6 +41,18 @@ export class SpacexApiService {
 
   getUpcomingLaunches(): Observable<Launch> {
     const requestEndpoint = this.baseUrl + '/launches/upcoming';
+    return this.restClient.get<Launch>(requestEndpoint)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getLaunches(options: LaunchOptions): Observable<Launch> {
+    let params = new URLSearchParams();
+    for(let key in options){
+      params.set(key, options[key]);
+    }
+    const requestEndpoint = this.baseUrl + '/launches?' + params.toString();
     return this.restClient.get<Launch>(requestEndpoint)
     .pipe(
       catchError(this.handleError)
