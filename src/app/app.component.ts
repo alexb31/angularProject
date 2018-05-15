@@ -17,16 +17,16 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.spacexService.getCompanyInfo()
                       .subscribe(data =>
-                      console.log(JSON.stringify(data)));
+                      console.log(data));
     this.spacexService.getLatestLaunches()
                       .subscribe(data =>
-                      console.log(JSON.stringify(data)));
+                      console.log(data));
     this.spacexService.getPastLaunches()
                       .subscribe(data =>
-                      console.log(JSON.stringify(data)));
+                      console.log(data));
     this.spacexService.getUpcomingLaunches()
                       .subscribe(data =>
-                      console.log(JSON.stringify(data)));
+                      console.log(data));
 
     let launchOptions = {
       order        : 'desc',
