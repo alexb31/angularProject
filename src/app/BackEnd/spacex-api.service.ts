@@ -5,7 +5,7 @@ import { CompanyInfo } from '../Models/CompanyInfo';
 import {catchError} from 'rxjs/operators';
 import { Launch } from '../Models/launch';
 import { LaunchOptions } from '../Models/launchOptions';
-import { URLSearchParams } from '@angular/http'
+import { URLSearchParams } from '@angular/http';
 
 @Injectable({
   providedIn: 'root'
