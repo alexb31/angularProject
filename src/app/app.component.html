@@ -1,16 +1,31 @@
 <mat-tab-group>
   <mat-tab label="Company Data">
+      <p>name: {{ companyInfo.name }} </p>
+      <p>founder: {{ companyInfo.founder }} </p>
+      <p>founded: {{ companyInfo.founded }} </p>
   </mat-tab>
   <mat-tab label="Rocket Data">
+      <pre></pre>
   </mat-tab>
   <mat-tab label="Capsule Data">
+      <pre></pre>
   </mat-tab>
   <mat-tab label="Launchpad Data">
+      <pre></pre>
   </mat-tab>
   <mat-tab label="Launches">
+      <!-- <mat-list>
+        <mat-list-item *ngFor="let c of companyInfo ">
+            <p matLine>name: {{ c.name }} </p>
+            <p matLine>founder: {{ c.founder }} </p>
+            <p matLine>founded: {{ c.founded }} </p>
+        </mat-list-item>
+      </mat-list> -->
   </mat-tab>
   <mat-tab label="Detailed Capsule Data">
+    <pre></pre>
   </mat-tab>
   <mat-tab label="Detailed Core Data">
+      <pre></pre>
   </mat-tab>
 </mat-tab-group>

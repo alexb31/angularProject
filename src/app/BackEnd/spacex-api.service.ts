@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { CompanyInfo } from '../Models/CompanyInfo';
 import { catchError} from 'rxjs/operators';
+import { CompanyInfo } from '../Models/CompanyInfo';
 import { Launch } from '../Models/launch';
 import { Launchpad } from '../Models/launchpad';
 import { CapPart } from '../Models/capPart';
