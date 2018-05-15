@@ -1,4 +1,4 @@
-<!-- <mat-drawer-container class="container" autosize>
+<mat-drawer-container class="container" autosize>
   <mat-toolbar color="primary">
     <button type="button" mat-icon-button (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
@@ -6,8 +6,8 @@
   </mat-toolbar>
   <mat-drawer #drawer class="sidenav" mode="push">
     <mat-nav-list>
-      <mat-list-item *ngFor="let item of menuItems">
-        <a matline routerLink="{{item.path}}" routerLinkActive="active">{{item.name}}</a>
+      <mat-list-item *ngFor="let item of menuItems" routerLink="{{item.path}}" routerLinkActive="active">
+        <a matline >{{item.name}}</a>
         <mat-divider></mat-divider>
       </mat-list-item>
     </mat-nav-list>
@@ -15,6 +15,4 @@
   <div class="sidenav-content">
     <router-outlet></router-outlet>
   </div>
-</mat-drawer-container> -->
-
-<app-menu></app-menu>
+</mat-drawer-container>

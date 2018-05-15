@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpacexApiService } from '../../BackEnd/spacex-api.service';
+import { Launch } from '../../Models/launch';
 
 @Component({
   selector: 'app-launches-list',
@@ -8,7 +9,7 @@ import { SpacexApiService } from '../../BackEnd/spacex-api.service';
 })
 export class LaunchesListComponent implements OnInit {
 
-  launches : Launches[];
+  launches : Launch[];
 
   constructor(private spacexService : SpacexApiService) { }
 

@@ -13,6 +13,7 @@ import { DetailedCoreDataComponent } from './components/detailed-core-data/detai
 import { LaunchesComponent } from './components/launches/launches.component';
 import { LaunchpadDataComponent } from './components/launchpad-data/launchpad-data.component';
 import { RocketDataComponent } from './components/rocket-data/rocket-data.component';
+import { MenuComponent } from './components/menu/menu.component';
 //import { LaunchesListComponent } from './launches-list/launches-list.component';
 
 @NgModule({
@@ -25,6 +26,7 @@ import { RocketDataComponent } from './components/rocket-data/rocket-data.compon
     LaunchesComponent,
     DetailedCapsuleDataComponent,
     DetailedCoreDataComponent,
+    MenuComponent,
     //LaunchesListComponent,
   ],
   imports: [
