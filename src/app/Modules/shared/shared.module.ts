@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
 
@@ -32,8 +31,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatToolbarModule,
     MatIconModule, 
     BrowserAnimationsModule, 
-    MatSidenavModule
+    MatSidenavModule,
+    MatInputModule,
+    FormsModule
   ]
-  exports: [ CommonModule, MatTabsModule, MatInputModule, FormsModule, MatListModule, BrowserAnimationsModule]
  })
 export class SharedModule { }
