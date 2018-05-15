@@ -28,12 +28,16 @@ export class AppComponent implements OnInit {
                       .subscribe(data =>
                       console.log(JSON.stringify(data)));
 
-    let options = {
+    let launchOptions = {
       order        : 'desc',
       flight_number: 61
     }
 
-    this.spacexService.getLaunches(options)
+    this.spacexService.getLaunches(launchOptions)
+                      .subscribe(data =>
+                      console.log(data));
+
+    this.spacexService.getCoreData('B1041')
                       .subscribe(data =>
                       console.log(data));
   }
