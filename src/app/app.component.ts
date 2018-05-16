@@ -21,32 +21,32 @@ import { LaunchOptions } from './Models/launchOptions';
 })
 export class AppComponent implements OnInit {
   menuItems = [{
-    name : 'Company Data',
-    path : '/companyInfo'
+    name: 'Company Data',
+    path: '/companyInfo'
   },
   {
-    name : 'Launches',
-    path : '/launches'
+    name: 'Launches',
+    path: '/launches'
   },
   {
-    name : 'Capsule Data',
-    path : '/capsuleData'
+    name: 'Capsule Data',
+    path: '/capsuleData'
   },
   {
-    name : 'Detailed Capsule Data',
-    path : '/detailedCapsuleData'
+    name: 'Detailed Capsule Data',
+    path: '/detailedCapsuleData'
   },
   {
-    name : 'Detailed Core Data',
-    path : '/detailedCoreData'
+    name: 'Detailed Core Data',
+    path: '/detailedCoreData'
   },
   {
-    name : 'Launchpad Data',
-    path : '/launchpadData'
+    name: 'Launchpad Data',
+    path: '/launchpadData'
   },
   {
-    name : 'Rocket Data',
-    path : '/rocketData'
+    name: 'Rocket Data',
+    path: '/rocketData'
   },
 ];
   title = 'app';
@@ -66,40 +66,40 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.spacexService.getCompanyInfo()
-      .subscribe(data =>{
-        this.companyInfo = data;
-      });
+    // this.spacexService.getCompanyInfo()
+    //   .subscribe(data =>{
+    //     this.companyInfo = data;
+    //   });
 
-    this.spacexService.getLatestLaunches()
-      .subscribe(data =>{
-        this.lastLaunches = data;
-      });
+    // this.spacexService.getLatestLaunches()
+    //   .subscribe(data =>{
+    //     this.lastLaunches = data;
+    //   });
 
-    this.spacexService.getPastLaunches()
-      .subscribe(data =>{
-        this.pastLaunches = data;
-      });
+    // this.spacexService.getPastLaunches()
+    //   .subscribe(data =>{
+    //     this.pastLaunches = data;
+    //   });
 
-    this.spacexService.getUpcomingLaunches()
-      .subscribe(data =>{
-        this.upcomingLaunches = data;
-      });
+    // this.spacexService.getUpcomingLaunches()
+    //   .subscribe(data =>{
+    //     this.upcomingLaunches = data;
+    //   });
 
-    let launchOptions = {
-      order        : 'desc',
-      flight_number: 61
-    }
+    // let launchOptions = {
+    //   order        : 'desc',
+    //   flight_number: 61
+    // }
 
-    this.spacexService.getLaunches(launchOptions)
-      .subscribe(data =>{
-        this.allLaunches = data;
-      });
+    // this.spacexService.getLaunches(launchOptions)
+    //   .subscribe(data =>{
+    //     this.allLaunches = data;
+    //   });
 
-    this.spacexService.getCoreData('B1041')
-      .subscribe(data =>{
-        this.core = data;
-      });
+    // this.spacexService.getCoreData('B1041')
+    //   .subscribe(data =>{
+    //     this.core = data;
+    //   });
 
   }
 }
