@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { SpacexApiService } from '../../BackEnd/spacex-api.service';
 
 @Component({
-  selector: 'app-company-info',
+  selector   : 'app-company-info',
   templateUrl: './company-info.component.html',
-  styleUrls: ['./company-info.component.css']
+  styleUrls  : ['./company-info.component.css']
 })
 export class CompanyInfoComponent implements OnInit {
+  companyInfo;
 
-  constructor() { }
+  constructor(private spacexService : SpacexApiService) { }
 
   ngOnInit() {
+    this.spacexService.getCompanyInfo().subscribe(data => {this.companyInfo = data; console.log(data)});
   }
 
 }
