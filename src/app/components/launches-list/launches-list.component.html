@@ -1,9 +1,13 @@
 <form (ngSubmit)="search()">
     <label for="flight_number">flight number:</label>
     <input type="text" [(ngModel)]="launchOptions.flight_number" #name="ngModel" name="flight_number" id="flight_number">
-    <label for="order">order:</label>
-    <input type="radio" [(ngModel)]="launchOptions.order" #name="ngModel" name="order" id="order" value="asc" checked>
-    <input type="radio" [(ngModel)]="launchOptions.order" #name="ngModel" name="order" id="order" value="desc" >
+    <br>
+    <span>order:</span>
+    <input type="radio" [(ngModel)]="launchOptions.order" #name="ngModel" name="order" id="asc" value="asc" checked>
+    <label for="asc">asc</label>
+    <input type="radio" [(ngModel)]="launchOptions.order" #name="ngModel" name="order" id="desc" value="desc" >
+    <label for="desc">desc</label>
+    <br>
     <button type="submit">Search</button>
 </form>
 <form (ngSubmit)="latest()">
