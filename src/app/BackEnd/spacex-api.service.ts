@@ -56,7 +56,7 @@ export class SpacexApiService {
     );
   }
 
-  getLaunches(options: LaunchOptions): Observable<Launch> {
+  getLaunches(options?: LaunchOptions): Observable<Launch> {
     let params = new URLSearchParams();
     for(let key in options){
       params.set(key, options[key]);

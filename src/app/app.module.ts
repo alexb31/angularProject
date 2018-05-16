@@ -13,7 +13,8 @@ import { DetailedCoreDataComponent } from './components/detailed-core-data/detai
 import { LaunchesComponent } from './components/launches/launches.component';
 import { LaunchpadDataComponent } from './components/launchpad-data/launchpad-data.component';
 import { RocketDataComponent } from './components/rocket-data/rocket-data.component';
-//import { LaunchesListComponent } from './launches-list/launches-list.component';
+import { LaunchesListComponent } from './components/launches-list/launches-list.component';
+import { LaunchComponent } from './components/launch/launch.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RocketDataComponent } from './components/rocket-data/rocket-data.compon
     LaunchesComponent,
     DetailedCapsuleDataComponent,
     DetailedCoreDataComponent,
-    //LaunchesListComponent,
+    LaunchesListComponent,
+    LaunchComponent,
   ],
   imports: [
     BrowserModule,

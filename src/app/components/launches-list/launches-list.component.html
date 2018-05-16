@@ -1,3 +1,6 @@
-<app-launch *ngFor="let launch of launches">
-  
-</app-launch>
+<mat-list>
+    <mat-list-item *ngFor="let launch of launches">
+        <app-launches [launch]="launch"></app-launches>
+        <mat-divider></mat-divider>
+    </mat-list-item>
+</mat-list>

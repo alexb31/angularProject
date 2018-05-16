@@ -28,6 +28,26 @@ export class AppComponent implements OnInit {
     name : 'Launches',
     path : '/launches'
   },
+  {
+    name : 'Capsule Data',
+    path : '/capsuleData'
+  },
+  {
+    name : 'Detailed Capsule Data',
+    path : '/detailedCapsuleData'
+  },
+  {
+    name : 'Detailed Core Data',
+    path : '/detailedCoreData'
+  },
+  {
+    name : 'Launchpad Data',
+    path : '/launchpadData'
+  },
+  {
+    name : 'Rocket Data',
+    path : '/rocketData'
+  },
 ];
   title = 'app';
   companyInfo;

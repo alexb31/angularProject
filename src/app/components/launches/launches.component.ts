@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-launches',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./launches.component.css']
 })
 export class LaunchesComponent implements OnInit {
+
+  @Input() launch;
 
   constructor() { }
 
