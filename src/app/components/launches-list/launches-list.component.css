@@ -1,7 +1,14 @@
 .example-card {
-    width: 220px;
+    width: 300px;
     float: left;
+    height: auto;
     margin-right: 25px;
-    height: 130px;
-    margin-bottom: 20px;
+    margin: 20px auto;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    flex: auto;
+    flex-wrap: wrap;
   }
