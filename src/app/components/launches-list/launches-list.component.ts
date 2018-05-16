@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpacexApiService } from '../../BackEnd/spacex-api.service';
-import { Launch } from '../../Models/launch'
+import { Launch } from '../../Models/launch';
 
 @Component({
   selector: 'app-launches-list',

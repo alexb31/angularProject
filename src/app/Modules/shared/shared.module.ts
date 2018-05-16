@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatCardModule} from '@angular/material/card';
 
 
 // import { CompanyInfo } from '../../Models/CompanyInfo';
@@ -33,7 +34,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     BrowserAnimationsModule, 
     MatSidenavModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatCardModule
   ]
  })
 export class SharedModule { }
