@@ -1,8 +1,12 @@
 <mat-drawer-container class="container" autosize>
-  <mat-toolbar color="primary">
+  <mat-toolbar color="accent">
     <button type="button" mat-icon-button (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
+    <a class="home" mat-icon-button routerLink="/">
+      <mat-icon>home</mat-icon>
+    </a>
+    <span>SpaceX</span>
   </mat-toolbar>
   <mat-drawer #drawer class="sidenav" mode="push">
     <mat-nav-list>

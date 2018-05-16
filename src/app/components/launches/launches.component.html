@@ -1,9 +1,11 @@
 <mat-card-header>
-  <img src="{{ launch.links.mission_patch_small }}" mat-card-avatar class="example-header-image">
+  <div class="div-img">
+    <img src="{{ launch.links.mission_patch_small }}" mat-card-avatar class="example-header-image">
+  </div>
   <mat-card-title>{{launch.mission_name}}</mat-card-title>
-  <mat-card-subtitle>{{ launch.launch_date_utc | date:'medium' }}</mat-card-subtitle>
+  <mat-card-subtitle>{{ launch.launch_date_utc | date:'yyyy-MM-dd, hh:mm' }}</mat-card-subtitle>
 </mat-card-header>
-<img mat-card-image src="{{launch.links.mission_patch_small}}" alt="{{launch.mission_name}}">
-<mat-card-content>
-  <p>{{launch.details}}</p>
+<mat-card-content [style.overflow]="'auto'" [style.height.px]="'60'">
+  <p *ngIf="launch.details">{{launch.details}}</p>
+  <p *ngIf="!launch.details">Ce lancement ne contient pas de description.</p>
 </mat-card-content>

@@ -8,8 +8,20 @@
     align-items: left;
     justify-content: left;
     padding: 20px;
+    background-image: url("/assets/img/spacex_fusee.jpg");
 }
 
 .mat-drawer {
     padding: 0;
+}
+
+.home {
+    color: white;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
+.home:hover {
+    color: #CCC;
 }
