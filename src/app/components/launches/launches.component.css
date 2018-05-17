@@ -41,6 +41,10 @@ mat-card-title.mat-card-title {
     /* border-radius: 10px; */
   }
 
+  .externalButton {
+    font-weight: 600;
+  }
+
   mat-card.example-card.mat-card.ng-star-inserted {
     background-color: #fff;
   }

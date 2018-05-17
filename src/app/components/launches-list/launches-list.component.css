@@ -2,7 +2,7 @@
     width: 390px;
     min-height: 220px;
     float: left;
-    height: auto;
+    height: fit-content;
     margin-right: 25px;
     margin: 20px auto;
     padding-bottom: 0;
