@@ -1,11 +1,21 @@
-<mat-card class="example-card" *ngFor="let cap of caps">
-  <mat-card-header>
-      <mat-card-title>{{cap.capsule_serial}}</mat-card-title>
-      <mat-card-subtitle><a href="/capsuleData/{{ cap.capsule_id }}">{{ cap.capsule_id }}</a></mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{cap.details}}</p>
-      <p>{{cap.original_launch}}</p>
-      <p>{{cap.type}}</p>
-    </mat-card-content>
-</mat-card>
+<div class="flex">
+  <mat-card class="example-card" *ngFor="let cap of caps">
+    <mat-card-header>
+        <mat-card-title>{{cap.capsule_serial}}</mat-card-title>
+        <mat-card-subtitle>
+          <mat-chip *ngIf="cap.status == 'active'" color="primary" selected="true">{{ cap.status }}</mat-chip>
+          <mat-chip *ngIf="cap.status != 'active'">{{ cap.status }}</mat-chip>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Capsule : <a href="/capsuleData/{{ cap.capsule_id }}">{{ cap.capsule_id }}</a></p>
+        <p>Original launch : {{cap.original_launch}}</p>
+        <p>Type : {{cap.type}}</p>
+        <p>Missions :</p>
+        <ul>
+          <li *ngFor="let mission of cap.missions">{{ mission }}</li>
+        </ul>
+        <p>Description : {{cap.details}}</p>
+      </mat-card-content>
+  </mat-card>
+</div>
