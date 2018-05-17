@@ -2,6 +2,9 @@
   <div *ngIf="launch.links.mission_patch_small " class="div-img">
     <img  src="{{ launch.links.mission_patch_small }}" mat-card-avatar class="example-header-image">
   </div>
+  <div *ngIf="!launch.links.mission_patch_small " class="div-img">
+    <img  src="/assets/img/fusee.png" mat-card-avatar class="example-header-image">
+  </div>
   <mat-card-title>{{launch.mission_name}}</mat-card-title>
   <mat-card-subtitle>
     {{ launch.launch_date_utc | date:'yyyy-MM-dd, hh:mm' }}<br>
