@@ -10,7 +10,7 @@ import { LaunchOptions } from '../../Models/launchOptions';
 export class LaunchesListComponent implements OnInit {
 
   launches;
-  launchOptions: LaunchOptions = { "order": "asc" };
+  launchOptions: LaunchOptions = { "order": "desc" };
 
   constructor(private spacexService : SpacexApiService) { }
 
