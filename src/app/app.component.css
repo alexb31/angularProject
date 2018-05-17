@@ -1,3 +1,7 @@
+.mat-toolbar.mat-accent{
+    background-color: #6b59ce;
+}
+
 .container {
     width: 100%;
     height: 100%;
@@ -9,6 +13,8 @@
     justify-content: left;
     padding: 20px;
     background-image: url("/assets/img/fh_hangar.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .mat-drawer {

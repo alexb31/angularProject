@@ -5,13 +5,31 @@
     height: auto;
     margin-right: 25px;
     margin: 20px auto;
+    padding-bottom: 0;
   }
+
+.form {
+  background-color: grey;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
 
   .flex {
     display: flex;
     justify-content: space-between;
     flex: auto;
     flex-wrap: wrap;
+  }
+
+  mat-card.example-card.mat-card.ng-star-inserted {
+    background-color: #fff;
+    color: #000;
+  }
+
+  mat-card.example-card.mat-card.ng-star-inserted {
+    border-radius: 5px;
+    border-top: 5px solid deepskyblue;
   }
 
   .radio-button {

@@ -11,9 +11,17 @@ mat-card-title.mat-card-title {
     background-size: cover;
   }
 
+  mat-card-content.mat-card-content {
+    background-color: #F9F9F9;
+    padding: 40px;
+    margin: -24px;
+    font-size: 16px;
+  }
+
   .div-img {
     position: absolute;
     right: 0;
+    top: 5px;
   }
 
   .mat-card-avatar {
@@ -29,6 +37,19 @@ mat-card-title.mat-card-title {
     background-color: #16a016;
   }
  
+  mat-card.example-card {
+    /* border-radius: 10px; */
+  }
+
+  mat-card.example-card.mat-card.ng-star-inserted {
+    background-color: #fff;
+  }
+
+  .mat-card-subtitle {
+    color: rgba(37, 37, 37, 0.7);
+    font-size: 16px;
+  }
+
   .launchFailed {
     background-color: #b52828;
   }

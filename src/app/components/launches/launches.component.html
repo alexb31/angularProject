@@ -14,26 +14,28 @@
     </div>
   </mat-card-subtitle>
 </mat-card-header>
-<mat-card-content [style.overflow]="'auto'" [style.height.px]="'fit-content'">
-  <p>Mission : {{ launch.mission_name }}</p>
-  <p>Launch site : <a href="/launchpadData/{{launch.launch_site.site_id}}">{{ launch.launch_site.site_name_long }}</a></p>
-  <p>Rocket : <a href="/rocketData/{{launch.rocket.rocket_id}}">{{ launch.rocket.rocket_name }}</a></p>
-  <p class="details" *ngIf="launch.details">Description : {{launch.details}}</p>
-  <p class="details" *ngIf="!launch.details">This launch doesn't have a description.</p>
-  <div *ngIf="launch.rocket.second_stage.payloads" >
-      <p>Payloads :</p>
-      <ul *ngFor="let payload of launch.rocket.second_stage.payloads">
-        <li *ngIf="payload.cap_serial"><a href="/detailedCapsuleData/{{payload.cap_serial}}">{{ payload.payload_id }}</a></li>
-        <li *ngIf="!payload.cap_serial">{{ payload.payload_id }}</li>
+<div>
+  <mat-card-content [style.overflow]="'auto'" [style.height.px]="'fit-content'">
+    <p>Mission : {{ launch.mission_name }}</p>
+    <p>Launch site : <a href="/launchpadData/{{launch.launch_site.site_id}}">{{ launch.launch_site.site_name_long }}</a></p>
+    <p>Rocket : <a href="/rocketData/{{launch.rocket.rocket_id}}">{{ launch.rocket.rocket_name }}</a></p>
+    <p class="details" *ngIf="launch.details">Description : {{launch.details}}</p>
+    <p class="details" *ngIf="!launch.details">This launch doesn't have a description.</p>
+    <div *ngIf="launch.rocket.second_stage.payloads" >
+        <p>Payloads :</p>
+        <ul *ngFor="let payload of launch.rocket.second_stage.payloads">
+          <li *ngIf="payload.cap_serial"><a href="/detailedCapsuleData/{{payload.cap_serial}}">{{ payload.payload_id }}</a></li>
+          <li *ngIf="!payload.cap_serial">{{ payload.payload_id }}</li>
+        </ul>
+      </div>
+    <div *ngIf="launch.rocket.first_stage.cores" >
+      <p>Core :</p>
+      <ul *ngFor="let core of launch.rocket.first_stage.cores">
+        <li><a href="/detailedCoreData/{{core.core_serial}}">{{ core.core_serial }}</a></li>
       </ul>
     </div>
-  <div *ngIf="launch.rocket.first_stage.cores" >
-    <p>Core :</p>
-    <ul *ngFor="let core of launch.rocket.first_stage.cores">
-      <li><a href="/detailedCoreData/{{core.core_serial}}">{{ core.core_serial }}</a></li>
-    </ul>
-  </div>
-
-  <a href="{{ launch.links.article_link }}">article</a> / 
-  <a href="{{ launch.links.video_link }}">video</a>
-</mat-card-content>
+  
+    <a href="{{ launch.links.article_link }}">article</a> / 
+    <a href="{{ launch.links.video_link }}">video</a>
+  </mat-card-content>
+</div>

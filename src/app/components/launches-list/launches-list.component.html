@@ -1,16 +1,18 @@
-<form>
-    <mat-form-field>
-        <input (change)="search()" matInput placeholder="Flight Number" [(ngModel)]="launchOptions.flight_number" #name="ngModel" name="flight_number" id="flight_number">
-    </mat-form-field>
-
-    <span>Order By: </span>
-    <mat-radio-group class="radio-group" [(ngModel)]="launchOptions.order" #name="ngModel" name="order">
-        <mat-radio-button  (change)="search()" class="radio-button" id="asc" value="asc">asc</mat-radio-button>
-        <mat-radio-button  (change)="search()" class="radio-button" id="desc" value="desc">desc</mat-radio-button>
-    </mat-radio-group>
-    <button (click)="latest()" mat-raised-button>Latest</button>
-    <button (click)="upcoming()" mat-raised-button>Upcoming</button>
-</form>
+<div class="form">
+    <form>
+        <mat-form-field>
+            <input (change)="search()" matInput placeholder="Flight Number" [(ngModel)]="launchOptions.flight_number" #name="ngModel" name="flight_number" id="flight_number">
+        </mat-form-field>
+    
+        <span>Order By: </span>
+        <mat-radio-group class="radio-group" [(ngModel)]="launchOptions.order" #name="ngModel" name="order">
+            <mat-radio-button  (change)="search()" class="radio-button" id="asc" value="asc">asc</mat-radio-button>
+            <mat-radio-button  (change)="search()" class="radio-button" id="desc" value="desc">desc</mat-radio-button>
+        </mat-radio-group>
+        <button (click)="latest()" mat-raised-button>Latest</button>
+        <button (click)="upcoming()" mat-raised-button>Upcoming</button>
+    </form>
+</div>
 
 <div class="flex">
     <mat-card class="example-card" *ngFor="let launch of launches">
