@@ -1,0 +1,14 @@
+.example-card {
+    width: 300px;
+    float: left;
+    height: auto;
+    margin-right: 25px;
+    margin: 20px auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex: auto;
+    flex-wrap: wrap;
+}

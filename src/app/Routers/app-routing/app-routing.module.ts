@@ -11,6 +11,7 @@ import { LaunchpadDataComponent } from '../../components/launchpad-data/launchpa
 import { RocketDataComponent } from '../../components/rocket-data/rocket-data.component';
 
 const appRoutes: Routes = [
+  {path: '', component: CompanyInfoComponent},
   {path: 'companyInfo', component: CompanyInfoComponent},
   {path: 'capsuleData', component: CapsuleDataComponent},
   {path: 'detailedCapsuleData', component: DetailedCapsuleDataComponent},
