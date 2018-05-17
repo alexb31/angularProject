@@ -10,4 +10,17 @@
   <p class="details" *ngIf="!launch.details">Ce lancement ne contient pas de description.</p>
   <p>launch site: <a href="/launchpadData/{{launch.launch_site.site_id}}">{{ launch.launch_site.site_name_long }}</a></p>
   <p>rocket: <a href="/rocketData/{{launch.rocket.rocket_id}}">{{ launch.rocket.rocket_name }}</a></p>
+  <div *ngIf="launch.rocket.second_stage.payloads" >
+      <p>Payloads:</p>
+      <ul *ngFor="let payload of launch.rocket.second_stage.payloads">
+        <li *ngIf="payload.cap_serial"><a href="/detailedCapsuleData/{{payload.cap_serial}}">{{ payload.payload_id }}</a></li>
+        <li *ngIf="!payload.cap_serial">{{ payload.payload_id }}</li>
+      </ul>
+    </div>
+  <div *ngIf="launch.rocket.first_stage.cores" >
+    <p>Core:</p>
+    <ul *ngFor="let core of launch.rocket.first_stage.cores">
+      <li><a href="/detailedCoreData/{{core.core_serial}}">{{ core.core_serial }}</a></li>
+    </ul>
+  </div>
 </mat-card-content>

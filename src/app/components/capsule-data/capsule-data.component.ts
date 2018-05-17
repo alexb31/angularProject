@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { SpacexApiService } from '../../BackEnd/spacex-api.service';
 import { ActivatedRoute } from '@angular/router';
 
-@Component({
-  selector   : 'app-detailed-capsule-data',
-  templateUrl: './detailed-capsule-data.component.html',
-  styleUrls  : ['./detailed-capsule-data.component.css']
-})
-export class DetailedCapsuleDataComponent implements OnInit {
 
+@Component({
+  selector   : 'app-capsule-data',
+  templateUrl: './capsule-data.component.html',
+  styleUrls  : ['./capsule-data.component.css']
+})
+export class CapsuleDataComponent implements OnInit {
   caps;
   name = "";
 
@@ -20,9 +20,9 @@ export class DetailedCapsuleDataComponent implements OnInit {
         console.log(params['name']);
         this.name = params['name'];
         this.caps = [];
-        this.spacexService.getCapData(this.name).subscribe(data => {this.caps[0] = data; console.log(data)});
+        this.spacexService.getCapsuleData(this.name).subscribe(data => {this.caps[0] = data; console.log(data)});
       }else{
-    this.spacexService.getCapData(this.name).subscribe(data => {this.caps = data; console.log(data)});
+    this.spacexService.getCapsuleData(this.name).subscribe(data => {this.caps = data; console.log(data)});
       }
     });
   }

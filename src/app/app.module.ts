@@ -14,6 +14,7 @@ import { LaunchpadDataComponent } from './components/launchpad-data/launchpad-da
 import { RocketDataComponent } from './components/rocket-data/rocket-data.component';
 import { LaunchesListComponent } from './components/launches-list/launches-list.component';
 import { LaunchComponent } from './components/launch/launch.component';
+import { CapsuleDataComponent } from './components/capsule-data/capsule-data.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { LaunchComponent } from './components/launch/launch.component';
     DetailedCoreDataComponent,
     LaunchesListComponent,
     LaunchComponent,
+    CapsuleDataComponent,
   ],
   imports: [
     BrowserModule,
