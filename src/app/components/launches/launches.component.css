@@ -5,3 +5,8 @@
   mat-card-header {
     height: 105px;
   }
+
+
+  .details {
+    font-size: 17px;
+  }

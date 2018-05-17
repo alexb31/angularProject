@@ -11,6 +11,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatButtonModule} from '@angular/material/button';
 
 
 // import { CompanyInfo } from '../../Models/CompanyInfo';
@@ -25,19 +26,20 @@ import {MatChipsModule} from '@angular/material/chips';
 // import { LaunchOptions } from '../../Models/launchOptions';
 
 @NgModule({
-  exports     : [ 
-    CommonModule, 
-    MatTabsModule, 
+  exports     : [
+    CommonModule,
+    MatTabsModule,
     MatListModule,
     MatDividerModule,
     MatToolbarModule,
-    MatIconModule, 
-    BrowserAnimationsModule, 
+    MatIconModule,
+    BrowserAnimationsModule,
     MatSidenavModule,
     MatInputModule,
     FormsModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    MatButtonModule
   ]
  })
 export class SharedModule { }
