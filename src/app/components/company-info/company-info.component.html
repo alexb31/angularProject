@@ -1,6 +1,12 @@
-<img class="img-responsive" src="assets/img/logo_spacex.png">
-<p>Valuation : {{ companyInfo.valuation | currency }}</p>
-<p>The company <strong>{{ companyInfo.name }}</strong> was founded by {{ companyInfo.founder }} in {{ companyInfo.founded }}.</p>
-<p>The headquarters of the company are at {{companyInfo.headquarters.address}}, in the city of {{companyInfo.headquarters.city}} in {{companyInfo.headquarters.state}}.</p>
-<p>The company contains {{ companyInfo.employees }} employees.</p>
-<p>Short description of the company : {{ companyInfo.summary }}</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title><img class="img-responsive" src="assets/img/logo_spacex.png"></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>Valuation : {{ companyInfo.valuation | currency }}</p>
+        <p>The company <strong>{{ companyInfo.name }}</strong> was founded by {{ companyInfo.founder }} in {{ companyInfo.founded }}.</p>
+        <p>The headquarters of the company are at {{companyInfo.headquarters.address}}, in the city of {{companyInfo.headquarters.city}} in {{companyInfo.headquarters.state}}.</p>
+        <p>The company contains {{ companyInfo.employees }} employees.</p>
+        <p>Short description of the company : {{ companyInfo.summary }}</p>
+    </mat-card-content>
+</mat-card>
