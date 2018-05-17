@@ -1,4 +1,6 @@
 <img class="img-responsive" src="assets/img/logo_spacex.png">
-<p>La compagnie {{ companyInfo.name }} a été fondée par {{ companyInfo.founder }} en {{ companyInfo.founded }}.</p>
-<p>Elle contient {{ companyInfo.employees }} employés.</p>
-<p>{{ companyInfo.valuation | currency }}</p>
+<p>Valuation : {{ companyInfo.valuation | currency }}</p>
+<p>The company <strong>{{ companyInfo.name }}</strong> was founded by {{ companyInfo.founder }} in {{ companyInfo.founded }}.</p>
+<p>The headquarters of the company are at {{companyInfo.headquarters.address}}, in the city of {{companyInfo.headquarters.city}} in {{companyInfo.headquarters.state}}.</p>
+<p>The company contains {{ companyInfo.employees }} employees.</p>
+<p>Short description of the company : {{ companyInfo.summary }}</p>

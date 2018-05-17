@@ -1,10 +1,26 @@
-<mat-card class="example-card" *ngFor="let capsule of capsules">
-    <mat-card-header>
-        <mat-card-title>{{ capsule.name }}</mat-card-title>
-        <mat-card-subtitle >{{ capsule.orbit_duration_yr }}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-          <mat-chip color="primary" *ngIf="capsule.active == true">Active</mat-chip>
-          <mat-chip *ngIf="capsule.active == false">Inactive</mat-chip>
-      </mat-card-content>
-  </mat-card>
+<div class="flex">
+    <mat-card class="example-card" *ngFor="let capsule of caps">
+        <mat-card-header>
+            <mat-card-title>{{ capsule.name }}</mat-card-title>
+            <mat-card-subtitle >  
+                <mat-chip color="primary" selected="true" *ngIf="capsule.active == true">Active</mat-chip>
+                <mat-chip *ngIf="capsule.active == false">Inactive</mat-chip>
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p *ngIf="capsule.orbit_duration_yr == 1">Orbit duration : {{ capsule.orbit_duration_yr }} year</p>
+            <p *ngIf="capsule.orbit_duration_yr > 1">Orbit duration : {{ capsule.orbit_duration_yr }} years</p>
+            <p>Dimensions :</p>
+                <ul>
+                    <li>Diameter : {{ capsule.diameter.meters }} m</li>
+                    <li>Height with trunk : {{ capsule.height_w_trunk.meters }} m</li>
+                    <li>Launch playload mass : {{ capsule.launch_payload_mass.kg }} kg</li>
+                    <li>Return playload mass : {{ capsule.return_payload_mass.kg }} kg</li>
+                </ul>
+            <p>Thrusters :</p>
+                <ul>
+                    <li *ngFor="let thruster of capsule.thrusters">Type {{ thruster.type }}</li>
+                </ul>
+        </mat-card-content>
+    </mat-card>
+</div>

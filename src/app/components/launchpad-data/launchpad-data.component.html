@@ -1,9 +1,19 @@
-<mat-card class="example-card" *ngFor="let launchpad of launchpads">
-  <mat-card-header>
-      <mat-card-title>{{launchpad.full_name}}</mat-card-title>
-      <mat-card-subtitle >{{ launchpad.id }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{launchpad.details}}</p>
-    </mat-card-content>
-</mat-card>
+<div class="flex">
+  <mat-card class="example-card" *ngFor="let launchpad of launchpads">
+    <mat-card-header>
+        <mat-card-title>{{launchpad.full_name}}</mat-card-title>
+        <mat-card-subtitle >
+          <mat-chip *ngIf="launchpad.status != 'active'">{{ launchpad.status }}</mat-chip>
+          <mat-chip *ngIf="launchpad.status == 'active'" color="primary" selected="true">{{ launchpad.status }}</mat-chip>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Location : {{ launchpad.location.name }} in {{ launchpad.location.region }}, [{{ launchpad.location.latitude }},{{ launchpad.location.longitude }}]</p>
+        <p>Rockets :</p>
+        <ul *ngFor="let rocket of launchpad.vehicles_launched">
+          <li>{{rocket}}</li>
+        </ul>
+        <p>Description : {{launchpad.details}}</p>
+      </mat-card-content>
+  </mat-card>
+</div>

@@ -1,9 +1,23 @@
-<mat-card class="example-card" *ngFor="let rocket of rockets">
-  <mat-card-header>
-      <mat-card-title>{{ rocket.name }}</mat-card-title>
-      <mat-card-subtitle >{{ rocket.cost_per_launch | currency}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{ rocket.description }}</p>
-    </mat-card-content>
-</mat-card>
+<div class="flex">
+  <mat-card class="example-card" *ngFor="let rocket of rockets">
+    <mat-card-header>
+        <mat-card-title>{{ rocket.name }}</mat-card-title>
+        <mat-card-subtitle >
+            <mat-chip color="primary" selected="true" *ngIf="rocket.active == true">Active</mat-chip>
+            <mat-chip *ngIf="rocket.active == false">Inactive</mat-chip>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Number of stages : {{ rocket.stages }}</p>
+        <p>Success rate : {{ rocket.success_rate_pct }}%</p>
+        <p>First flight : {{ rocket.first_flight }} in {{ rocket.country }}</p>
+        <p>Dimensions :</p>
+          <ul>
+            <li>Height : {{ rocket.height.meters }} m</li>
+            <li>Diameter : {{ rocket.diameter.meters }} m</li>
+            <li>Mass : {{ rocket.mass.kg }} kg</li>
+          </ul>
+        <p>Short description : {{ rocket.description }}</p>
+      </mat-card-content>
+  </mat-card>
+</div>
