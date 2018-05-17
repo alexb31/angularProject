@@ -8,8 +8,10 @@
   <mat-card-title>{{launch.mission_name}}</mat-card-title>
   <mat-card-subtitle>
     {{ launch.launch_date_utc | date:'yyyy-MM-dd, hh:mm' }}<br>
-    <mat-chip *ngIf="launch.launch_success == true" color="primary" selected="true">Succeed</mat-chip>
-    <mat-chip *ngIf="launch.launch_success == false">Failed</mat-chip>
+    <div class="buttonLaunch">
+      <mat-chip *ngIf="launch.launch_success == true" class="launchSuccess">Success</mat-chip>
+      <mat-chip *ngIf="launch.launch_success == false" class="launchFailed">Failed</mat-chip>
+    </div>
   </mat-card-subtitle>
 </mat-card-header>
 <mat-card-content [style.overflow]="'auto'" [style.height.px]="'fit-content'">
