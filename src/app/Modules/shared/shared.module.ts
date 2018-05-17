@@ -11,6 +11,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatButtonModule} from '@angular/material/button';
 
 
 // import { CompanyInfo } from '../../Models/CompanyInfo';
@@ -37,7 +38,8 @@ import {MatChipsModule} from '@angular/material/chips';
     MatInputModule,
     FormsModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    MatButtonModule
   ]
  })
 export class SharedModule { }
