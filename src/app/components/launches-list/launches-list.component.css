@@ -13,3 +13,11 @@
     flex: auto;
     flex-wrap: wrap;
   }
+
+  .radio-button {
+    margin: 0 20px;
+  }
+
+  button {
+    margin: 10px 0;
+  }

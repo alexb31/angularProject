@@ -1,20 +1,30 @@
 <form (ngSubmit)="search()">
-    <label for="flight_number">flight number:</label>
-    <input type="text" [(ngModel)]="launchOptions.flight_number" #name="ngModel" name="flight_number" id="flight_number">
-    <br>
-    <span>order:</span>
+
+    <mat-form-field>
+        <input matInput placeholder="Flight Number" [(ngModel)]="launchOptions.flight_number" #name="ngModel" name="flight_number" id="flight_number">
+    </mat-form-field>
+
+    <span>Order By: </span>
+        <mat-radio-group class="radio-group" [(ngModel)]="launchOptions.order" #name="ngModel" name="order">
+                <mat-radio-button class="radio-button" id="asc" value="asc" checked>asc</mat-radio-button>
+                <mat-radio-button class="radio-button" id="desc" value="desc">desc</mat-radio-button>
+        </mat-radio-group>
+
+
+    <!-- <span>order:</span>
     <input type="radio" [(ngModel)]="launchOptions.order" #name="ngModel" name="order" id="asc" value="asc" checked>
     <label for="asc">asc</label>
     <input type="radio" [(ngModel)]="launchOptions.order" #name="ngModel" name="order" id="desc" value="desc" >
-    <label for="desc">desc</label>
+    <label for="desc">desc</label> -->
     <br>
-    <button type="submit">Search</button>
+    <button type="submit" mat-raised-button>Search</button>
+    <!-- <button type="submit">Search</button> -->
 </form>
 <form (ngSubmit)="latest()">
-    <button type="submit">latest</button>
+    <button type="submit" mat-raised-button>latest</button>
 </form>
 <form (ngSubmit)="upcoming()">
-    <button type="submit">upcoming</button>
+    <button type="submit" mat-raised-button>upcoming</button>
 </form>
 
 <div class="flex">
