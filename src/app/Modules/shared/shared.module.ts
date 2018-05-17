@@ -26,14 +26,14 @@ import {MatButtonModule} from '@angular/material/button';
 // import { LaunchOptions } from '../../Models/launchOptions';
 
 @NgModule({
-  exports     : [ 
-    CommonModule, 
-    MatTabsModule, 
+  exports     : [
+    CommonModule,
+    MatTabsModule,
     MatListModule,
     MatDividerModule,
     MatToolbarModule,
-    MatIconModule, 
-    BrowserAnimationsModule, 
+    MatIconModule,
+    BrowserAnimationsModule,
     MatSidenavModule,
     MatInputModule,
     FormsModule,

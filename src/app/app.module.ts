@@ -7,7 +7,6 @@ import { AppRoutingModule } from './Routers/app-routing/app-routing.module';
 import { CompanyInfoComponent } from './components/company-info/company-info.component';
 
 import { SharedModule } from './Modules/shared/shared.module';
-import { CapsuleDataComponent } from './components/capsule-data/capsule-data.component';
 import { DetailedCapsuleDataComponent } from './components/detailed-capsule-data/detailed-capsule-data.component';
 import { DetailedCoreDataComponent } from './components/detailed-core-data/detailed-core-data.component';
 import { LaunchesComponent } from './components/launches/launches.component';
@@ -21,7 +20,6 @@ import { LaunchComponent } from './components/launch/launch.component';
     AppComponent,
     CompanyInfoComponent,
     RocketDataComponent,
-    CapsuleDataComponent,
     LaunchpadDataComponent,
     LaunchesComponent,
     DetailedCapsuleDataComponent,

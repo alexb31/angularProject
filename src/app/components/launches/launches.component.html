@@ -8,4 +8,6 @@
 <mat-card-content [style.overflow]="'auto'" [style.height.px]="'fit-content'">
   <p class="details" *ngIf="launch.details">{{launch.details}}</p>
   <p class="details" *ngIf="!launch.details">Ce lancement ne contient pas de description.</p>
+  <p>launch site: <a href="/launchpadData/{{launch.launch_site.site_id}}">{{ launch.launch_site.site_name_long }}</a></p>
+  <p>rocket: <a href="/rocketData/{{launch.rocket.rocket_id}}">{{ launch.rocket.rocket_name }}</a></p>
 </mat-card-content>
