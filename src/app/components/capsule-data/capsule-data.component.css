@@ -8,6 +8,12 @@
     padding-bottom: 0;
   }
 
+  mat-card-title.mat-card-title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 26px;
+  }
+
   .example-card {
     width: 390px;
     min-height: 220px;
@@ -16,6 +22,34 @@
     margin-right: 25px;
     margin: 20px auto;
     padding-bottom: 0;
+  }
+
+  .capsuleProperty {
+    font-weight: 700;
+  }
+
+  .isActive {
+    background-color: #16a016 !important;
+  }
+
+  mat-chip {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+  }
+
+  mat-card {
+    background-color: #fff;
+    color: #000;
+    padding-bottom: 0;
+  }
+
+  mat-card-content.mat-card-content {
+    background-color: #F9F9F9;
+    padding: 40px;
+    margin: -24px;
+    font-size: 16px;
   }
 
   mat-card.example-card.mat-card.ng-star-inserted {

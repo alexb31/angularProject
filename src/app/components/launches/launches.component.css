@@ -27,6 +27,7 @@ mat-card-title.mat-card-title {
   .mat-card-avatar {
     height: 120px;
     width: 120px;
+    margin-right: 5px;
   }
 
   mat-card-header {
