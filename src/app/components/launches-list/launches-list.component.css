@@ -8,8 +8,17 @@
     padding-bottom: 0;
   }
 
+  .mat-radio-container > .mat-radio-outer-circle {
+    border-color: crimson;
+  }
+
+  .mat-radio-inner-circle {
+    background-color: crimson !important;
+  }
+
 .form {
-  background-color: grey;
+  background-color: #909090;
+  color: #000;
   display: flex;
   align-items: baseline;
   justify-content: space-around;

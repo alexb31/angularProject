@@ -66,6 +66,14 @@ mat-card-title.mat-card-title {
     padding: 10px;
   }
 
+  .mat-radio-container > .mat-radio-outer-circle {
+    border-color: crimson;
+  }
+
+  .mat-radio-inner-circle {
+    background-color: crimson !important;
+  }
+
   /* .details {
     font-size: 17px;
   } */

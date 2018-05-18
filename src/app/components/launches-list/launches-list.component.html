@@ -5,9 +5,9 @@
         </mat-form-field>
     
         <span>Order By: </span>
-        <mat-radio-group class="radio-group" [(ngModel)]="launchOptions.order" #name="ngModel" name="order">
-            <mat-radio-button  (change)="search()" class="radio-button" id="asc" value="asc">asc</mat-radio-button>
-            <mat-radio-button  (change)="search()" class="radio-button" id="desc" value="desc">desc</mat-radio-button>
+        <mat-radio-group color="warn" class="radio-group" [(ngModel)]="launchOptions.order" #name="ngModel" name="order">
+            <mat-radio-button (change)="search()" class="radio-button" id="asc" value="asc">asc</mat-radio-button>
+            <mat-radio-button (change)="search()" class="radio-button" id="desc" value="desc">desc</mat-radio-button>
         </mat-radio-group>
         <button (click)="latest()" mat-raised-button>Latest</button>
         <button (click)="upcoming()" mat-raised-button>Upcoming</button>
